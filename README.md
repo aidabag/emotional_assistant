@@ -2,7 +2,7 @@
 
 Выполнила: Багуманова Аида, Р4207
 
-### Скринкаст по ссылке: ссылка
+### Скринкаст по [ссылке](https://drive.google.com/file/d/1kUFMPlrpq4H8sB-xh4okTZQgQve4MWda/view?usp=sharing)
 
 # Эмоциональный помощник для саморефлексии
 
