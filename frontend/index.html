@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эмоциональный помощник для саморефлексии</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Эмоциональный помощник для саморефлексии</h1>
+            <p>Поделитесь своими переживаниями и получите вопросы для размышления</p>
+        </div>
+
+        <div class="disclaimer">
+            ⚠️ <strong>Важно:</strong> Этот сервис не является медицинским или психологическим инструментом.
+            Он не предназначен для диагностики или лечения. При возникновении кризисных ситуаций
+            обратитесь к специалистам или экстренным службам.
+        </div>
+
+        <div class="messages" id="messages">
+            <div class="message assistant">
+                <div class="message-bubble">
+                    Привет! Я помощник для саморефлексии. Опишите, как вы себя чувствуете,
+                    что вас беспокоит или радует, и я помогу вам подумать над этим.
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-container">
+                <textarea id="messageInput" placeholder="Опишите свои переживания..." rows="1"></textarea>
+                <button id="sendButton" onclick="sendMessage()">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

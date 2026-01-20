@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: emotional_assistant_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PROVIDER=${PROVIDER:-yandex}
+      - YANDEX_API_KEY=${YANDEX_API_KEY}
+      - YANDEX_FOLDER_ID=${YANDEX_FOLDER_ID}
+      - APP_HOST=${APP_HOST:-0.0.0.0}
+      - APP_PORT=${APP_PORT:-8000}
+      - DATABASE_URL=${DATABASE_URL:-sqlite:///./data/db.sqlite}
+      - RAG_TOP_K=${RAG_TOP_K:-3}
+    volumes:
+      - ./data:/app/data
+      - ./frontend:/app/frontend
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
